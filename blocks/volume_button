@@ -1,0 +1,19 @@
+#!/bin/bash
+
+my_name=${0##*/}
+my_dir=${0%/*}
+
+case $1 in
+    1) # Left click
+        pamixer -t
+        ;;
+    4) # Scroll up
+        pamixer --allow-boost -i 10
+        ;;
+    5) # Scroll down  
+        pamixer --allow-boost -d 10
+        ;;
+    6) # Shift + Left click
+        st -e nvim $my_dir/${my_name%_button}
+        ;;
+esac
