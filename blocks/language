@@ -8,13 +8,16 @@ CURRENT_LANG=$(cat $CURRENT_LANG_PATH)
 
 case $CURRENT_LANG in
     "us")
-        CURRENT_LANG="sr"
+        CURRENT_LANG="rs"
+		setxkbmap -layout rs -variant latin
         ;;
-    "sr")
-        CURRENT_LANG="cp"
+    "rs")
+        CURRENT_LANG="pc"
+		setxkbmap -layout rs
         ;;
-    "cp")
+    "pc")
         CURRENT_LANG="us"
+		setxkbmap -layout us
         ;;
     *)
         exit

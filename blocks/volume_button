@@ -7,6 +7,9 @@ case $1 in
     1) # Left click
         pamixer -t
         ;;
+    3) # Right click
+       	st -e pulsemixer
+        ;;
     4) # Scroll up
         pamixer --allow-boost -i 10
         ;;

@@ -1,7 +1,6 @@
 #!/bin/bash 
 
 volume="$(pamixer --get-volume)"
-[ $(pamixer --get-mute) = true ] && echo "  婢  "&& exit
 
 if [ "$volume" -gt "70" ]; then
 	icon="墳"
@@ -10,4 +9,7 @@ elif [ "$volume" -lt "30" ]; then
 else
 	icon="奔"
 fi
+
+[ $(pamixer --get-mute) = true ] && icon="婢"
+
 printf "$icon ${volume}%%"

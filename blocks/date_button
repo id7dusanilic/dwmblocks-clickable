@@ -4,6 +4,9 @@ my_name=${0##*/}
 my_dir=${0%/*}
 
 case $1 in
+    1) # Left click
+        st -e calcurse 
+        ;;
     6) # Shift + Left click
         st -e nvim $my_dir/${my_name%_button}
         ;;
