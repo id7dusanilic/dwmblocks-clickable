@@ -1,15 +1,21 @@
 #!/bin/bash 
 
 volume="$(pamixer --get-volume)"
+noticon_path=$HOME/.dwmblocks/icons/
 
 if [ "$volume" -gt "70" ]; then
 	icon="墳"
+	noticon="volume-high.png"
 elif [ "$volume" -lt "30" ]; then
 	icon="奄"
+	noticon="volume-low.png"
 else
 	icon="奔"
+	noticon="volume-medium.png"
 fi
 
-[ $(pamixer --get-mute) = true ] && icon="婢"
+[ $(pamixer --get-mute) = true ] && icon="ﱝ"; noticon=:"volume-muted.png"
 
-printf "$icon ${volume}%%"
+#printf "$icon ${volume}%%"
+#notify-send --icon=${noticon_path}${noticon} Volume $volume
+printf "$icon"
