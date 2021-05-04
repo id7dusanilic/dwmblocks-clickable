@@ -1,0 +1,13 @@
+#!/bin/bash
+
+my_name=${0##*/}
+my_dir=${0%/*}
+
+case $1 in
+    6) # Shift + Left click
+        st -e nvim $my_dir/${my_name%_button}
+        ;;
+    7) # Shift + Right click
+        st -e nvim $my_dir/$my_name
+        ;;
+esac
