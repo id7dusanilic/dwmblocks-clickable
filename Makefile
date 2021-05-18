@@ -44,8 +44,10 @@ install: all
 	mkdir -p ${BINDIR}
 	cp -f dwmblocks sigdwmblocks/sigdwmblocks xgetrootname/xgetrootname ${BINDIR}
 	chmod 755 ${BINDIR}/dwmblocks ${BINDIR}/sigdwmblocks ${BINDIR}/xgetrootname
+	install -m 755 blocks/* ${BINDIR}
 
 uninstall:
 	rm -f ${BINDIR}/dwmblocks ${BINDIR}/sigdwmblocks ${BINDIR}/xgetrootname
+	rm -f $(shell find blocks -type f -printf "${BINDIR}/%f ")
 
 .PHONY: all clean install uninstall

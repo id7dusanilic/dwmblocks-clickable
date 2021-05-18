@@ -53,8 +53,8 @@ buttonhandler(int sig, siginfo_t *info, void *ucontext)
 
                                         close(ConnectionNumber(dpy));
                                         setsid();
-                                        execv(arg[0], arg);
-                                        perror("buttonhandler - child - execv");
+                                        execvp(arg[0], arg);
+                                        perror("buttonhandler - child - execvp");
                                         _exit(127);
                                 }
                         }
@@ -194,15 +194,15 @@ updateblock(Block *block, int sigval)
                         if (sigval == NILL) {
                                 char *arg[] = { block->pathu, NULL };
 
-                                execv(arg[0], arg);
+                                execvp(arg[0], arg);
                         } else {
                                 char buf[12];
                                 char *arg[] = { block->pathu, buf, NULL };
 
                                 snprintf(buf, sizeof buf, "%d", sigval);
-                                execv(arg[0], arg);
+                                execvp(arg[0], arg);
                         }
-                        perror("updateblock - child - execv");
+                        perror("updateblock - child - execvp");
                         _exit(127);
                 default:
                 {

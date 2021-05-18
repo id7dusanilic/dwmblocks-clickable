@@ -1,5 +1,5 @@
 /* macro for conveniently specifying pathu and pathc below */
-#define PATH(name)                      "/home/minimalist/software/dwmblocks-clickable/blocks/"name
+#define PATH(name)                      name
 
 /* buffer size for capturing output of the programs used for updating blocks */
 #define CMDOUTLENGTH                    50
@@ -45,9 +45,9 @@ static Block blocks[] = {
 /*      pathu                           pathc                           interval        signal */
         { PATH("memory"),               PATH("memory_button"),          5,              1},
         { PATH("language"),             PATH("language_button"),        0,              2},
-        { PATH("volume"),               PATH("volume_button"),          1,              3},
+        { PATH("volume"),               PATH("volume_button"),          0,              3},
         { PATH("battery"),              PATH("battery_button"),         5,              4},
-        { PATH("date"),                 PATH("date_button"),            0,              5},
+        { PATH("calendar"),             PATH("calendar_button"),        0,              5},
         { PATH("clock"),                PATH("clock_button"),           60,             6},
         { NULL } /* just to mark the end of the array */
 };
