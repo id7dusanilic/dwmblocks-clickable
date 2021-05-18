@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 my_name=${0##*/}
 my_dir=${0%/*}

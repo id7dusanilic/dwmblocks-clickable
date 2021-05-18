@@ -1,4 +1,4 @@
-#! /bin/bash 
+#!/bin/sh
 
 clock="$(date +"%H:%M"| sed 's/  / /g')"
 # If time is 00:00 signal the date to change
