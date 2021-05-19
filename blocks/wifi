@@ -1,6 +1,0 @@
-#!/bin/sh
-
-STATUS_FILE="$HOME/.dwmblocks/datausage"
-STATUS=$(cat $STATUS_FILE)
-
-echo $STATUS
