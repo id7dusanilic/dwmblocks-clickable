@@ -3,14 +3,16 @@
 my_name=${0##*/}
 my_dir=${0%/*}
 
+[ -n ${TERM_EMULATOR} ] && EMULATOR=${TERM_EMULATOR} || EMULATOR=st
+
 case $1 in
     1) # Left Click
         notify-send "Keyboard layout" "Use SHIFT+SPACE to change the keyboard layout"
         ;;
     6) # Shift + Left click
-        st -e nvim $my_dir/${my_name%_button}
+        ${EMULATOR} -e ${EDITOR} $my_dir/${my_name%_button}
         ;;
     7) # Shift + Right click
-        st -e nvim $my_dir/$my_name
+        ${EMULATOR} -e ${EDITOR} $my_dir/$my_name
         ;;
 esac

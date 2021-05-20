@@ -3,12 +3,14 @@
 my_name=${0##*/}
 my_dir=${0%/*}
 
+[ -n ${TERM_EMULATOR} ] && EMULATOR=${TERM_EMULATOR} || EMULATOR=st
+
 case $1 in
     1) # Left click
         pamixer -t
         ;;
     3) # Right click
-       	st -e pulsemixer
+       	${EMULATOR} -e pulsemixer
         ;;
     4) # Scroll up
         pamixer --allow-boost -i 10
@@ -17,10 +19,10 @@ case $1 in
         pamixer --allow-boost -d 10
         ;;
     6) # Shift + Left click
-        st -e nvim $my_dir/${my_name%_button}
+        ${EMULATOR} -e ${EDITOR} $my_dir/${my_name%_button}
         ;;
     7) # Shift + Right click
-        st -e nvim $my_dir/$my_name
+        ${EMULATOR} -e ${EDITOR} $my_dir/$my_name
         ;;
 esac
 kill -37 $(pidof dwmblocks)
