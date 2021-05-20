@@ -1,4 +1,4 @@
-PREFIX = /usr/local
+PREFIX = $${HOME}/.local
 
 CC = gcc
 CFLAGS = -O3 -Wall -Wextra
