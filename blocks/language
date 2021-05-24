@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CURRENT_LANG_PATH="$HOME/.dwmblocks/current_lang"
+CURRENT_LANG_PATH="$HOME/.local/share/current_lang"
 CURRENT_LANG=$(cat $CURRENT_LANG_PATH)
 
 echo "  $CURRENT_LANG"
