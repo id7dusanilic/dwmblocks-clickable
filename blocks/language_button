@@ -7,7 +7,7 @@ my_dir=${0%/*}
 
 case $1 in
     1) # Left Click
-        notify-send "Keyboard layout" "Use SHIFT+SPACE to change the keyboard layout"
+		dmenu_keyboard_layout
         ;;
     6) # Shift + Left click
         ${EMULATOR} -e ${EDITOR} $my_dir/${my_name%_button}
