@@ -47,7 +47,7 @@ static Block blocks[] = {
         { PATH("language"),             PATH("language_button"),        0,              2},
         { PATH("volume"),               PATH("volume_button"),          0,              3},
         { PATH("battery"),              PATH("battery_button"),         5,              4},
-        { PATH("calendar"),             PATH("calendar_button"),        0,              5},
-        { PATH("clock"),                PATH("clock_button"),           60,             6},
+        { PATH("calendar"),             PATH("calendar_button"),        60,             5},
+        { PATH("clock"),                PATH("clock_button"),           30,             6},
         { NULL } /* just to mark the end of the array */
 };
