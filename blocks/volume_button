@@ -25,4 +25,3 @@ case $1 in
         ${EMULATOR} -e ${EDITOR} $my_dir/$my_name
         ;;
 esac
-kill -37 $(pidof dwmblocks)
