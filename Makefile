@@ -45,9 +45,11 @@ install: all
 	cp -f dwmblocks sigdwmblocks/sigdwmblocks xgetrootname/xgetrootname ${BINDIR}
 	chmod 755 ${BINDIR}/dwmblocks ${BINDIR}/sigdwmblocks ${BINDIR}/xgetrootname
 	install -m 755 blocks/* ${BINDIR}
+	install -m 755 daemons/* ${BINDIR}
 
 uninstall:
 	rm -f ${BINDIR}/dwmblocks ${BINDIR}/sigdwmblocks ${BINDIR}/xgetrootname
 	rm -f $(shell find blocks -type f -printf "${BINDIR}/%f ")
+	rm -f $(shell find daemons -type f -printf "${BINDIR}/%f ")
 
 .PHONY: all clean install uninstall
