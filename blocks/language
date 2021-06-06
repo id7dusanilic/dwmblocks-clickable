@@ -1,6 +1,5 @@
 #!/bin/sh
 
-CURRENT_LANG_PATH="$HOME/.local/share/current_lang"
-CURRENT_LANG=$(cat $CURRENT_LANG_PATH)
+CURRENT_LANG=$(keyboard_layout --get)
 
 echo "  $CURRENT_LANG"

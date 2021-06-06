@@ -7,7 +7,7 @@ my_dir=${0%/*}
 
 case $1 in
     1) # Left Click
-		dmenu_keyboard_layout
+		keyboard_layout --set; sigdwmblocks 2
         ;;
     6) # Shift + Left click
         ${EMULATOR} -e ${EDITOR} $my_dir/${my_name%_button}

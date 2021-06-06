@@ -1,4 +1,4 @@
 #!/bin/sh
 
-mem="$(free -h | awk '/^Mem:/ {print $3 "/" $2}')"
-echo -e " 力 $mem RAM"
+mem="$(free -m | awk '/^Mem:/ {print $3 "M/" $2 "M"}')"
+echo -e "力 $mem RAM"
