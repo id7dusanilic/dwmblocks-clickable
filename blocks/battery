@@ -26,7 +26,8 @@ if [ "$status" = "Discharging" ]; then
         symbol=""
     else
         symbol=""
-	notify-send -t 5000 -i $HOME/.dwmblocks/icons/lowbat.png "Battery Extremly Low" "Plug in the AC adapter"
+	notify-send -h 'string:fgcolor:#ffffff' -h 'string:frcolor:#ff0000' -h 'string:bgcolor:#770000' \
+		"Battery Extremly Low" "Plug in the AC adapter"
     fi
 else
     if [ $capacity -gt 95 ]; then
